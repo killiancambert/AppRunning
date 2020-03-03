@@ -32,7 +32,7 @@ class Connexion extends React.Component {
 
             <View >
                
-        <Button title='Se Connecter' onPress={() => {}}/>
+        <Button style = 'backgroundColor' title='Se Connecter' onPress={() => {}}/>
             </View>
 
      
