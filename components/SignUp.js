@@ -1,6 +1,8 @@
 // SignUp.js
 import React from 'react'
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native'
+import { Switch} from 'react-native'
+
 export default class SignUp extends React.Component {
   state = { email: '', password: '', errorMessage: null }
 handleSignUp = () => {
@@ -31,6 +33,31 @@ render() {
           value={this.state.nom}
         />
 
+<TextInput
+          placeholder="Sexe"
+          autoCapitalize="none"
+          style={styles.textInput}
+          onChangeText={sexe => this.setState({ sexe })}
+          value={this.state.sexe}
+        />
+
+
+<TextInput
+          placeholder="Date de naissance"
+          autoCapitalize="none"
+          style={styles.textInput}
+          onChangeText={sexe => this.setState({ sexe })}
+          value={this.state.sexe}
+        />
+
+<TextInput
+          placeholder="Mail"
+          autoCapitalize="none"
+          style={styles.textInput}
+          onChangeText={mail => this.setState({ mail })}
+          value={this.state.mail}
+        />
+
         <TextInput
           secureTextEntry
           placeholder="Mot de passse"
@@ -39,9 +66,19 @@ render() {
           onChangeText={password => this.setState({ password })}
           value={this.state.password}
         />
-        <Button title="Sign Up" onPress={this.handleSignUp} />
+
+<TextInput
+          secureTextEntry
+          placeholder="Confirmation mot de passe"
+          autoCapitalize="none"
+          style={styles.textInput}
+          onChangeText={password => this.setState({ password })}
+          value={this.state.password}
+        />
+
+        <Button title="S'inscrire" onPress={this.handleSignUp} />
         <Button
-          title="Already have an account? Login"
+          title="Vous avez deéjà un compte ? Connexion"
           onPress={() => this.props.navigation.navigate('Login')}
         />
       </View>
