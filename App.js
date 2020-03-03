@@ -1,12 +1,14 @@
 // App.js
 
 import React from 'react'
-import Connexion from './components/Connexion'
+
+
+import SignUp from './components/SignUp'
 
 export default class App extends React.Component {
   render() {
     return (
-      <Connexion/>
+      <SignUp/>
     )
   }
 }
