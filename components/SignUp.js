@@ -11,12 +11,20 @@ handleSignUp = () => {
 }
 render() {
     return (
+
+        
       <View style={styles.container}>
-        <Text>Inscription</Text>
+
+        <Text style ={styles.inscription}
+        >Inscription</Text>
         {this.state.errorMessage &&
           <Text style={{ color: 'red' }}>
             {this.state.errorMessage}
           </Text>}
+
+        <Text>
+            Prénom
+        </Text>
         <TextInput
           placeholder="Prénom"
           autoCapitalize="none"
@@ -25,6 +33,9 @@ render() {
           value={this.state.prenom}
         />
 
+<Text>
+            Nom
+        </Text>
 <TextInput
           placeholder="Nom"
           autoCapitalize="none"
@@ -33,6 +44,9 @@ render() {
           value={this.state.nom}
         />
 
+<Text>
+            Sexe
+        </Text>
 <TextInput
           placeholder="Sexe"
           autoCapitalize="none"
@@ -41,6 +55,9 @@ render() {
           value={this.state.sexe}
         />
 
+<Text>
+            Date de naissance
+        </Text>
 
 <TextInput
           placeholder="Date de naissance"
@@ -50,6 +67,10 @@ render() {
           value={this.state.sexe}
         />
 
+<Text>
+            Mail
+        </Text>
+
 <TextInput
           placeholder="Mail"
           autoCapitalize="none"
@@ -57,6 +78,10 @@ render() {
           onChangeText={mail => this.setState({ mail })}
           value={this.state.mail}
         />
+
+<Text>
+            Mot de passe
+        </Text>
 
         <TextInput
           secureTextEntry
@@ -66,6 +91,10 @@ render() {
           onChangeText={password => this.setState({ password })}
           value={this.state.password}
         />
+
+<Text>
+           Confirmation de mot de passe
+        </Text>
 
 <TextInput
           secureTextEntry
@@ -90,15 +119,23 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor :'#F96155'
+    backgroundColor :'white'
   },
   textInput: {
     height: 40,
     width: '90%',
-    borderColor: 'white',
+    borderColor: '#E4E4E4',
     backgroundColor:'white',
     borderWidth: 1,
     borderRadius:10,
     marginTop: 8
+  },
+  inscription:{
+      width :'100%',
+    backgroundColor:'#F96155',
+    fontSize:50,
+    textAlign:'center',
+    color:'white',
+
   }
 })
